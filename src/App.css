@@ -1,38 +1,152 @@
-.App {
+body {
+  background-color: #fefefe; 
+}
+
+h1 {
+  text-align: right;
+  margin-right: 20px; 
+  color: white; 
+  font-size: 35px;
+}
+
+.navbar {
+  background-color: #9ebfff; 
   text-align: center;
+  padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar a {
+  color: white; 
+  text-decoration: none;
+}
+.navbar a.active {
+  font-weight: bold; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.navbar .nav-linkCata {
+  color: rgb(255, 255, 255);
+  background-color: #e49785;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border-color: white;
+  border-style: solid;
+  display: inline-block; 
+  position: absolute;  
+  right: 68px; 
+  top: 90px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+.navbar .nav-linkAdmin {
+  color: rgb(255, 255, 255);
+  background-color: #596cd7;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border-color: white;
+  border-style: solid;
+  position: absolute;
+  left: 10px; 
+  top: 40px;
+   
+}
+
+.form-container {
+  width: 300px;
+  margin: 0 auto; 
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #9ebfff;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form-input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-input:last-child {
+  margin-bottom: 20px;
 }
+
+.form-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
+
+.catalogue {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row; 
+}
+
+.product {
+  width: 27%;
+  margin: 1%;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.product h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+.categoriebutton{
+  border-style: solid;
+  margin-top: 10px;
+  border-radius: 3px;
+  border-color: #9ebfff;
+  background-color: #9ebfff;
+  color: #fff;
+  font-size: 20px;
+}
+.prix-modifie {
+  font-weight: bold;
+  color: red;
+}
+
+
+
+
+
+
+
