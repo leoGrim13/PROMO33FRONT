@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 function AdminManager() {
   const navigate = useNavigate();
   const [isCreateProductFormVisible, setCreateProductFormVisible] = useState(false);
-  const [isAddPromoFormVisible, setAddPromoFormVisible] = useState(false)
+  const [isAddPromoFormVisible, setAddPromoFormVisible] =    useState(false)
 
   const isAuthenticated = localStorage.getItem('isAuthenticated');
 

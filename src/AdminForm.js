@@ -17,9 +17,8 @@ function AdminForm() {
       alert('Veuillez remplir tous les champs.');
       return;
     }
-
     try {
-      const response = await axios.post('/log', {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/log`, {
         email,
         username,
         password,
