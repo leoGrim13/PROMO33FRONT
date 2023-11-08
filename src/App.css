@@ -143,10 +143,77 @@ h1 {
   font-weight: bold;
   color: red;
 }
+.create-product-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
+.create-product-form label {
+  display: block;
+  margin-bottom: 5px;
+}
 
+.create-product-form input,
+.create-product-form select,
+.create-product-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
 
+.create-product-form button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
+.create-product-form button:hover {
+  background-color: #0056b3;
+}
+.add-promo {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+.add-promo h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
 
+.add-promo label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
 
+.add-promo select,
+.add-promo input[type="number"],
+.add-promo input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.add-promo button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px
+}
