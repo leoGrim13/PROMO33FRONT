@@ -23,7 +23,7 @@ function App() {
 
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_CATEGORIE}`)
+    axios.get(`${process.env.REACT_APP_API_URL}/categorie`)
       .then((response) => {
         const toutesLesCategories = [
           { id: '', nom: 'Tous les produits' },
@@ -39,7 +39,7 @@ function App() {
 
   useEffect(() => {
     if (selectedCategory) {
-      axios.get(`${process.env.REACT_APP_API_CATEGORIE}/categorie?categorieId=` + selectedCategory)
+      axios.get(`${process.env.REACT_APP_API_URL}/categorie?categorieId=` + selectedCategory)
         .then((response) => {
           setProducts(response.data);
         })

@@ -10,7 +10,7 @@ function Catalogue() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const categoriesResponse = await axios.get('${process.env.REACT_APP_API_URL}/categorie');
+        const categoriesResponse = await axios.get(`${process.env.REACT_APP_API_URL}/categorie`);
         const toutesLesCategories = [
           { id: '', nom: 'Tous les produits' },
           ...categoriesResponse.data

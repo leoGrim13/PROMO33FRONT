@@ -18,7 +18,7 @@ function AdminForm() {
       return;
     }
     try {
-      const response = await axios.post(`${process.env.REACT_APP_API_LOG}`, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/log`, {
         email,
         username,
         password,
