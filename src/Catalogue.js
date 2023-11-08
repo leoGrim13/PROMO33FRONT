@@ -18,7 +18,7 @@ function Catalogue() {
         setCategories(toutesLesCategories);
         let productsResponse;
         if (selectedCategory === '') {
-          productsResponse = await axios.get('${process.env.REACT_APP_API_URL}/prod');
+          productsResponse = await axios.get(`${process.env.REACT_APP_API_URL}/prod`);
         } else {
           productsResponse = await axios.get(`${process.env.REACT_APP_API_URL}/prod/tri?categorie=${selectedCategory}`);
         }
@@ -71,7 +71,7 @@ function Catalogue() {
             <p  className={produit.prixAvecPromotion !== produit.prix ? 'prix-modifie' : ''}>
               Prix : {produit.prixAvecPromotion ? produit.prixAvecPromotion.toFixed(2) : "N/A"} €</p>
 
-            <img src={`/images/${produit.image}`} alt={produit.nom} />
+            <img src={`${process.env.REACT_APP_IMAGE_URL}/images/${produit.image}`} alt={produit.nom} />
           </div>
         ))}
       </div>

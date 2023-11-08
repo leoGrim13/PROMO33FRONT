@@ -8,7 +8,7 @@ function AddPromo() {
   const [finPromo, setFinPromo] = useState(''); 
 
   useEffect(() => {
-    fetch('${process.env.REACT_APP_API_URL}/prod')
+    fetch(`${process.env.REACT_APP_API_URL}/prod`)
       .then((response) => response.json())
       .then((data) => {
         setProduits(data);
@@ -42,7 +42,7 @@ function AddPromo() {
     const dateDebut = debutPromo;
     const dateFin = finPromo;
 
-    fetch('${process.env.REACT_APP_API_URL}/promotion/create', {
+    fetch(`${process.env.REACT_APP_API_URL}/promotion/create`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
