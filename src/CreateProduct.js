@@ -51,9 +51,14 @@ function CreateProduct() {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
+      })
+      .then(response => {
+        console.log('Le produit a été ajouté.', response.data);
+      })
+      .catch(error => {
+        console.error('Erreur lors de l\'ajout du produit :', error);
       });
-
-      console.log('Le produit a été ajouté.');
+      
 
       setProduct({
         nom: '',
