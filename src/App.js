@@ -23,10 +23,10 @@ function App() {
 
 
   useEffect(() => {
-    axios.get('/categorie')
+    axios.get(`${process.env.REACT_APP_CATEGORIE_API_URL}`)
       .then((response) => {
         const toutesLesCategories = [
-          { id: '', nom: 'Tous les produits' },  
+          { id: '', nom: 'Tous les produits' },
           ...response.data
         ];
         setCategories(toutesLesCategories);
@@ -35,11 +35,11 @@ function App() {
         console.error(error);
       });
   }, []);
+  
 
   useEffect(() => {
     if (selectedCategory) {
-      axios.get('/categorie?categorieId=' + selectedCategory)
-
+      axios.get(`${process.env.REACT_APP_CATEGORIE_API_URL}/categorie?categorieId=` + selectedCategory)
         .then((response) => {
           setProducts(response.data);
         })
@@ -48,6 +48,7 @@ function App() {
         });
     }
   }, [selectedCategory]);
+  
 
     return (
       <Router>
