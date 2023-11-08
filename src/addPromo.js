@@ -68,7 +68,7 @@ function AddPromo() {
   };
 
   return (
-    <div>
+    <div className="add-promo">
       <h2>Créer une promotion</h2>
       <label>Sélectionnez un produit :</label>
       <select value={produitId} onChange={(e) => setProduitId(e.target.value)}>
@@ -79,16 +79,12 @@ function AddPromo() {
           </option>
         ))}
       </select>
-      <br />
       <label>Pourcentage de réduction :</label>
       <input type="number" value={pourcentage} onChange={(e) => setPourcentage(e.target.value)} />
-      <br />
       <label>Date de début de promotion :</label>
       <input type="date" value={debutPromo} onChange={(e) => setDebutPromo(e.target.value)} />
-      <br />
       <label>Date de fin de promotion :</label>
       <input type="date" value={finPromo} onChange={(e) => setFinPromo(e.target.value)} />
-      <br />
       <button onClick={handleSubmit}>Créer la promotion</button>
     </div>
   );

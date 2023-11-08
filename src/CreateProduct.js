@@ -73,7 +73,7 @@ function CreateProduct() {
   }
 
   return (
-    <form onSubmit={handleSubmit} encType="multipart/form-data">
+    <form onSubmit={handleSubmit} encType="multipart/form-data" className="create-product-form">
       <label htmlFor="nom">Nom :</label>
       <input
         type="text"
@@ -100,21 +100,19 @@ function CreateProduct() {
         onChange={handleChange}
       />
 
-        <label htmlFor="categorie">Catégorie :</label>
-        <select
-          id="categorie"
-          name="categorie"
-          value={product.categorie || 11}
-          onChange={handleChange}
-        >
-          {categories.map((categorie) => (
-            <option key={categorie.id} value={categorie.id}>
-              {categorie.nom}
-            </option>
-          ))}
-        </select>
-
-
+      <label htmlFor="categorie">Catégorie :</label>
+      <select
+        id="categorie"
+        name="categorie"
+        value={product.categorie || 1}
+        onChange={handleChange}
+      >
+        {categories.map((categorie) => (
+          <option key={categorie.id} value={categorie.id}>
+            {categorie.nom}
+          </option>
+        ))}
+      </select>
 
       <label htmlFor="image1">Image :</label>
       <input
