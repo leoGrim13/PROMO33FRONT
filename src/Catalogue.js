@@ -18,14 +18,14 @@ function Catalogue() {
         setCategories(toutesLesCategories);
         let productsResponse;
         if (selectedCategory === '') {
-          productsResponse = await axios.get('/prod');
+          productsResponse = await axios.get('${process.env.REACT_APP_API_URL}/prod');
         } else {
-          productsResponse = await axios.get(`/prod/tri?categorie=${selectedCategory}`);
+          productsResponse = await axios.get(`${process.env.REACT_APP_API_URL}/prod/tri?categorie=${selectedCategory}`);
         }
 
         setProducts(productsResponse.data);
         const getPriceWithPromotion = async (produit) => {
-          const response = await axios.get(`/promotion/getPrice/${produit.id}`);
+          const response = await axios.get(`${process.env.REACT_APP_API_URL}/promotion/getPrice/${produit.id}`);
           return response.data;
         };
         

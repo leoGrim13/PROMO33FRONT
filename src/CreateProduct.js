@@ -3,7 +3,7 @@ import axios from 'axios';
 
 async function fetchCategories() {
   try {
-    const response = await axios.get('/categorie');
+    const response = await axios.get('${process.env.REACT_APP_API_URL}/categorie');
     return response.data;
   } catch (error) {
     console.error(error);
@@ -47,7 +47,7 @@ function CreateProduct() {
       formData.append('categorie', product.categorie);
       formData.append('image1', product.image1);
 
-      await axios.post('/prod/addProduct', formData, {
+      await axios.post('${process.env.REACT_APP_API_URL}/prod/addProduct', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
