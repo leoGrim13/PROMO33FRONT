@@ -71,7 +71,7 @@ function Catalogue() {
             <p  className={produit.prixAvecPromotion !== produit.prix ? 'prix-modifie' : ''}>
               Prix : {produit.prixAvecPromotion ? produit.prixAvecPromotion.toFixed(2) : "N/A"} €</p>
 
-            <img src={`${process.env.REACT_APP_IMAGE_URL}/images/${produit.image}`} alt={produit.nom} />
+            <img src={`${process.env.REACT_APP_IMAGE_URL}static/images/${produit.image}`} alt={produit.nom} />
           </div>
         ))}
       </div>
